@@ -1,0 +1,110 @@
+$bg: rgba(0,100,0,.1) !default;
+$color: #333 !default;
+$color-vusui: #199583 !default;
+$color-white: #fff !default;
+$color-gray: #888 !default;
+$color-light: #f1f1f1 !default;
+$size-small: .75rem !default;
+$size-base: .875rem !default;
+$size-header: 1.5rem !default;
+$font-family: "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif !default;
+
+$sizes: () !default;
+$sizes: map-merge((
+	12: 12px,
+	16: 16px,
+	20: 20px,
+	25: 25px,
+	30: 30px
+), $sizes);
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: $font-family;
+	font-size: $size-base;
+	line-height: 1.5;
+	background-color: $bg;
+	color: $color;
+}
+
+a {
+	color: $color;
+	text-decoration: none;
+}
+a:hover {
+	color: $color-vusui;
+	text-decoration: none;
+}
+
+header,
+footer {
+	height: 3.75rem;
+	line-height: 3.75rem;
+	background-color: $color-vusui;
+	text-align: center;
+	font-size: $size-header;
+	color: $color-white;
+}
+header ul {
+	display: inline-block;
+	list-style: none;
+}
+header ul li {
+	display: block;
+	float: left;
+}
+header ul li a {
+	color: $color-white !important;
+	display: block;
+	padding: 0 1.25rem;
+	position: relative;
+}
+header ul li a:hover {
+	background-color: rgba($color-white, .15);
+}
+header ul li a.active {
+	background-color: rgba($color-white, .3);
+}
+
+section {
+	width: 100%;
+	height: calc(100% - 7.5rem);
+	display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center; 
+	align-items: center;
+	background-color: $bg;
+}
+
+section ul {
+	list-style: none;
+}
+section ul li {
+	padding: .625rem;
+}
+
+footer {
+	background-color: $color-light;
+	color: $color-gray;
+	font-size: $size-small;
+}
+
+
+@each $key, $value in $sizes {
+    .fs-#{$key} {
+        font-size: $value !important;
+    }
+}
