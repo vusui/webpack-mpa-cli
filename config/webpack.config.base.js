@@ -100,10 +100,6 @@ module.exports = {
                 }],
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: ["url-loader"]
-            },
-            {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {

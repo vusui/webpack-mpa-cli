@@ -1,6 +1,6 @@
 {
   "name": "webpack-mpa-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "webpack multipage application cli template",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,5 +35,20 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"
-  }
+  },
+  "main": ".eslintrc.js",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vusui/webpack-mpa-cli.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-mpa-cli",
+    "webpack-templast"
+  ],
+  "bugs": {
+    "url": "https://github.com/vusui/webpack-mpa-cli/issues"
+  },
+  "homepage": "https://github.com/vusui/webpack-mpa-cli#readme"
 }
